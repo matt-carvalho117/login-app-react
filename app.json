@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "login-app",
-    "slug": "login-app",
+    "name": "buckshot-roullete",
+    "slug": "snack-ac0d92a3-b9c0-46c9-bd6d-30ba1c78d265",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,7 +20,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.professorangoti.buckshotroullete"
     },
     "web": {
       "favicon": "./assets/favicon.png"

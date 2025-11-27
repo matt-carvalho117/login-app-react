@@ -1,70 +1,44 @@
-import { useState } from "react";
-import {
-        View,
-        Text,
-        Pressable,
-        StyleSheet,
-        Alert,
-} from "react-native";
-import { auth } from "../services/firebase";
-import { signOut } from "firebase/auth";
+import { useState } from 'react';
+import { Platform, Alert, BackHandler, View } from 'react-native';
+import { styles } from '../components/estilos';
+import Inicio from '../components/Inicio';
+import Game from '../components/Game';
+import Loading from '../components/Loading';
+import Perdeu from '../components/Perdeu';
+import Ganhou from '../components/Ganhou';
+import Easter from '../components/Easter';
+import Dificuldade from '../components/Dificuldade';
+import LoginScreen from './LoginScreen';
+import RegisterScreen from './RegisterScreen';
+export default function App() {
 
-export default function HomeScreen( ) {
-        const { email } = auth.currentUser || {};
+  const [tela, setTela] = useState('login');
 
-        async function handleLogout() {
-                try {
-                        await signOut(auth);
-                } catch (e) {
-                        Alert.alert("Erro", "Não foi possível sair.");
-                }
-        }
+  const goTo = (nomeTela) => {
+    console.log(2);
+    setTela(nomeTela);
+  };
+  const sair = () => {
+    if (Platform.OS === 'android') {
+      BackHandler.exitApp();
+    } else {
+      Alert.alert('Sair', 'Esta opção não está disponivel para iOS', [
+        { text: 'OK' },
+      ]);
+    }
+  };
+  return (
+    <View style={styles.container}>
 
-        return (
-                <View style={styles.container}>
-                        <Text style={styles.titulo}>Bem-vindo!</Text>
-                        <Text style={styles.subtitulo}>
-                                Usuário autenticado:
-                        </Text>
-                        <Text style={styles.email}>{email}</Text>
-
-                        <Pressable
-                                style={styles.botao}
-                                onPress={handleLogout}>
-                                <Text style={styles.botaoTexto}>Logout</Text>
-                        </Pressable>
-                </View>
-        );
+      {tela === 'inicio' && <Inicio nav={goTo} sair={sair} />}
+      {tela === 'jogo' && <Game nav={goTo} />}
+      {tela === 'dificuldade' && <Dificuldade nav={goTo} />}
+      {tela === 'loading' && <Loading nav={goTo} />}
+      {tela === 'perdeu' && <Perdeu nav={goTo} />}
+      {tela === 'ganhou' && <Ganhou nav={goTo} />}
+      {tela === 'easter' && <Easter nav={goTo} />}
+      {tela === 'login' && <LoginScreen nav={goTo} />}
+      {tela === 'register' && <RegisterScreen nav={goTo} />}
+    </View>
+  );
 }
-
-const styles = StyleSheet.create({
-        container: {
-                flex: 1,
-                padding: 24,
-                justifyContent: "center",
-                alignItems: "center",
-        },
-        titulo: {
-                fontSize: 28,
-                fontWeight: "800",
-                marginBottom: 8,
-        },
-        subtitulo: { fontSize: 16, opacity: 0.7 },
-        email: {
-                fontSize: 18,
-                marginTop: 4,
-                marginBottom: 24,
-                fontWeight: "600",
-        },
-        botao: {
-                backgroundColor: "#ef4444",
-                paddingVertical: 14,
-                paddingHorizontal: 28,
-                borderRadius: 12,
-        },
-        botaoTexto: {
-                color: "#fff",
-                fontWeight: "700",
-                fontSize: 16,
-        },
-});

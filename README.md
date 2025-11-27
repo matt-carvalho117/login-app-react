@@ -1,65 +1,67 @@
-# Login App React
+# Buckshot Roulette
 
-Este projeto foi desenvolvido como parte da disciplina de **Desenvolvimento de Dispositivos Móveis**, ministrada pelo professor **Edson Angoti**. O objetivo principal é criar uma aplicação de login utilizando **React**, simulando um fluxo de autenticação básico e explorando conceitos modernos de desenvolvimento para aplicações móveis híbridas.
+Bem-vindo ao repositório do **Buckshot Roulette**!  
+Este projeto é uma implementação do jogo Buckshot Roulette usando JavaScript.
+
+## Sumário
+
+- [Descrição](#descrição)
+- [Como rodar o aplicativo](#como-rodar-o-aplicativo)
+- [Como jogar](#como-jogar)
+- [Integrantes](#integrantes)
+- [Tecnologias utilizadas](#tecnologias-utilizadas)
+- [Licença](#licença)
 
 ## Descrição
 
-A aplicação permite que o usuário faça login com credenciais simuladas, demonstrando o funcionamento de telas, navegação e manipulação de estados no React. O projeto serve como base para entendimento de como construir interfaces responsivas e interativas, além de integrar boas práticas de desenvolvimento.
+Buckshot Roulette é um jogo inspirado na roleta russa, focado em suspense, azar e estratégia. O objetivo principal é sobreviver o máximo possível, tomando decisões em cada rodada que podem alterar seu destino.
 
-## Funcionalidades
+## Como rodar o aplicativo
 
-- Tela de login com validação de campos
-- Feedback visual para tentativas de login inválidas
-- Navegação entre telas (login e página inicial)
-- Utilização de componentes funcionais e hooks do React
+1. **Pré-requisitos**
+   - Tenha o [Node.js](https://nodejs.org/) instalado (versão recomendada: 14 ou superior).
+   - (Opcional) Instale um servidor local como [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) para rodar arquivos HTML/JS.
 
-## Tecnologias Utilizadas
+2. **Instalação**
+   - Clone este repositório:
+     ```bash
+     git clone https://github.com/lazaro00junio/Trabalho_Jogo_Buckshot_Roullete.git
+     ```
+   - Acesse a pasta do projeto:
+     ```bash
+     cd Trabalho_Jogo_Buckshot_Roullete
+     ```
 
-- [React](https://reactjs.org/)
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+3. **Execução**
+   - Abra o Vs Code e execute:
+     ```bash
+     npm start
+     ```
+   - Siga as instruções exibidas na tela para jogar.
 
-## Como executar
+## Como jogar
+   - O nosso projeto,”Buckshot Roulette”, é baseado em um jogo de computador, de mesmo nome, criado por Mike Klubnika.
+   - No início da partida, uma escopeta ,de 16 cartuchos, é carregada com um número aleatório de balas; que ,dependo da dificuldade, variam entre 6 e 12. E o restante da capacidade da arma é ocupada por cartuchos de festim.
+   - Assim, durante a partida, jogador deve escolher entre atirar no seu inimigo ou em si mesmo;
+   - Ao atirar no inimigo, o jogador não poderá atuar no próximo turno. Caso dispare um cartucho de verdade, o inimigo perderá 1 ponto de vida. Porém, isso não ocorrerá caso a bala seja falsa;
+   - Ao atirar em si mesmo, caso o cartucho seja verdadeiro, o jogador poderá agir no próximo turno. Contudo, caso dispare um bala falsa, ele perderá um ponto de vida e não atuará na rodada seguinte.
+   - A partida acaba quando a vida do jogador, ou a vida do inimigo, chegar a 0.
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/matt-carvalho117/login-app-react.git
-   ```
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
-3. Execute a aplicação:
-   ```bash
-   npm start
-   ```
+## Integrantes
 
-A aplicação será aberta no navegador padrão, geralmente em `http://localhost:3000`.
+- [Carlos Eduardo]
+- [Filipe Valadão]
+- [Matheus Carvalho]
+- [Lázaro Araújo]
 
-## Estrutura do Projeto
+## Tecnologias utilizadas
 
-```
-login-app-react/
-├── public/
-├── src/
-│   ├── components/
-│   ├── App.js
-│   ├── index.js
-│   └── ...
-├── package.json
-└── README.md
-```
-
-## Autor
-
-- **Matheus Carvalho**  
-  Discente da disciplina de Desenvolvimento de Dispositivos Móveis
+- **JavaScript** (100%)
+- HTML/CSS para interface (caso aplicável)
+- [Node.js](https://nodejs.org/) para execução local (opcional)
 
 ## Licença
 
-Este projeto é apenas para fins acadêmicos e estudos.
+Este projeto é destinado apenas para fins educacionais.
 
 ---
-
-**Professor:** Edson Angoti  
-**Disciplina:** Desenvolvimento de Dispositivos Móveis  

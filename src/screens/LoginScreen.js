@@ -100,12 +100,6 @@ export default function LoginScreen() {
                                         Não tem conta? Cadastre-se
                                 </Text>
                         </Pressable>
-                        <Pressable
-                                onPress={() => navigation.navigate("Register")}>
-                                <Text style={styles.link}>
-                                        Esqueceu a senha? 
-                                </Text>
-                        </Pressable>
                 </KeyboardAvoidingView>
         );
 }
